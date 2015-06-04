@@ -1,0 +1,258 @@
+body.grid-info:after{
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid #bbb;
+	content: "B";
+}
+
+/* 	------------------------------------
+ Common Row
+--------------------------------------- */
+[data-grid-row],
+[data-grid-row-xs],
+[data-grid-row-sm],
+[data-grid-row-md],
+[data-grid-row-lg]
+{
+	margin-left: -@gutter;
+	margin-right: -@gutter;
+	box-sizing: border-box;
+
+	&:after{
+		display: table;
+		content: " ";
+		clear: both;
+	}
+}
+
+/* 	------------------------------------
+ Common Col
+--------------------------------------- */
+[data-grid-col],
+[data-grid-col-xs],
+[data-grid-col-sm],
+[data-grid-col-md],
+[data-grid-col-lg]{
+	padding-left: @gutter;	
+	padding-right: @gutter;
+	float: left;
+	box-sizing: border-box;
+}
+
+/* 	------------------------------------
+ Gutters
+--------------------------------------- */
+[data-grid-row~="gutter-reset"]{
+	margin-left: 0;
+	margin-right: 0;
+
+	[data-grid-col],
+	[data-grid-col-xs],
+	[data-grid-col-sm],
+	[data-grid-col-md],
+	[data-grid-col-lg]{
+		padding-left: 0;	
+		padding-right: 0;
+	}
+}
+
+[data-grid-row~="gutter-2"]{
+	margin-left: -@gutter-xs;
+	margin-right: -@gutter-xs;
+
+	[data-grid-col],
+	[data-grid-col-xs],
+	[data-grid-col-sm],
+	[data-grid-col-md],
+	[data-grid-col-lg]{
+		padding-left: @gutter-xs;
+		padding-right: @gutter-xs;
+	}
+}
+
+[data-grid-row~="gutter-1"]{
+	margin-left: -@gutter-sm;
+	margin-right: -@gutter-sm;
+
+	[data-grid-col],
+	[data-grid-col-xs],
+	[data-grid-col-sm],
+	[data-grid-col-md],
+	[data-grid-col-lg]{
+		padding-left: @gutter-sm;
+		padding-right: @gutter-sm;
+	}
+}
+
+[data-grid-row~="gutter+1"]{
+	margin-left: -@gutter-md;
+	margin-right: -@gutter-md;
+
+	[data-grid-col],
+	[data-grid-col-xs],
+	[data-grid-col-sm],
+	[data-grid-col-md],
+	[data-grid-col-lg]{
+		padding-left: @gutter-md;
+		padding-right: @gutter-md;
+	}
+}
+
+[data-grid-row~="gutter+2"]{
+	margin-left: -@gutter-lg;
+	margin-right: -@gutter-lg;
+
+	[data-grid-col],
+	[data-grid-col-xs],
+	[data-grid-col-sm],
+	[data-grid-col-md],
+	[data-grid-col-lg]{
+		padding-left: @gutter-lg;
+		padding-right: @gutter-lg;
+	}
+}
+
+/* 	------------------------------------
+ Common margins
+--------------------------------------- */
+[data-grid-col~="mb"]{
+	margin-bottom: @gutter*2;
+}
+
+[data-grid-col~="mb-gutter-2"]{
+	margin-bottom: @gutter-xs*2;
+}
+
+[data-grid-col~="mb-gutter-1"]{
+	margin-bottom: @gutter-sm*2;
+}
+
+[data-grid-col~="mb-gutter+1"]{
+	margin-bottom: @gutter-md*2;
+}
+
+[data-grid-col~="mb-gutter+2"]{
+	margin-bottom: @gutter-lg*2;
+}
+
+[data-grid-col~="mb-reset"]{
+	margin-bottom: 0;
+}
+
+/* 	------------------------------------
+ Col width
+--------------------------------------- */
+
+[data-grid-col~="1"]{
+	width: (100/(12 / 1)) * 1%;
+}
+
+[data-grid-col~="2"]{
+	width: (100/(12 / 2)) * 1%;
+}
+
+[data-grid-col~="3"]{
+	width: (100/(12 / 3)) * 1%;
+}
+
+[data-grid-col~="4"]{
+	width: (100/(12 / 4)) * 1%;
+}
+
+[data-grid-col~="5"]{
+	width: (100/(12 / 5)) * 1%;
+}
+
+[data-grid-col~="6"]{
+	width: (100/(12 / 6)) * 1%;
+}
+
+[data-grid-col~="7"]{
+	width: (100/(12 / 7)) * 1%;
+}
+
+[data-grid-col~="8"]{
+	width: (100/(12 / 8)) * 1%;
+}
+
+[data-grid-col~="9"]{
+	width: (100/(12 / 9)) * 1%;
+}
+
+[data-grid-col~="10"]{
+	width: (100/(12 / 10)) * 1%;
+}
+
+[data-grid-col~="11"]{
+	width: (100/(12 / 11)) * 1%;
+}
+
+[data-grid-col~="12"]{
+	width: (100/(12 / 12)) * 1%;
+}
+
+/* 	------------------------------------
+ Col offset
+--------------------------------------- */
+
+[data-grid-col~="offset-0"]{
+	margin-left: 0;
+}
+
+[data-grid-col~="offset-1"]{
+	margin-left: (100/(12 / 1)) * 1%;
+}
+
+[data-grid-col~="offset-2"]{
+	margin-left: (100/(12 / 2)) * 1%;
+}
+
+[data-grid-col~="offset-3"]{
+	margin-left: (100/(12 / 3)) * 1%;
+}
+
+[data-grid-col~="offset-4"]{
+	margin-left: (100/(12 / 4)) * 1%;
+}
+
+[data-grid-col~="offset-5"]{
+	margin-left: (100/(12 / 5)) * 1%;
+}
+
+[data-grid-col~="offset-6"]{
+	margin-left: (100/(12 / 6)) * 1%;
+}
+
+[data-grid-col~="offset-7"]{
+	margin-left: (100/(12 / 7)) * 1%;
+}
+
+[data-grid-col~="offset-8"]{
+	margin-left: (100/(12 / 8)) * 1%;
+}
+
+[data-grid-col~="offset-9"]{
+	margin-left: (100/(12 / 9)) * 1%;
+}
+
+[data-grid-col~="offset-10"]{
+	margin-left: (100/(12 / 10)) * 1%;
+}
+
+[data-grid-col~="offset-11"]{
+	margin-left: (100/(12 / 11)) * 1%;
+}
+
+[data-grid-col~="offset-12"]{
+	margin-left: (100/(12 / 12)) * 1%;
+}
+
+/* 	------------------------------------
+ Col width auto
+--------------------------------------- */
+[data-grid-col~="auto"]{
+	width: auto;
+}
