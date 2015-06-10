@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Orbit Grid</title>
         <link rel="stylesheet" href="client/build/site.css">
+        <script src="js/OrbitGrid.js"></script>
     </head>
 
     <body class="grid-info">
@@ -138,6 +139,24 @@
 	    		</div>
     		</div>
     	</div>
+
+
+    	<div data-grid-bp style="width: 90%; height: 50px; background-color: gray; margin: 0 auto;padding: 100px;box-sizing: border-box;">
+			<input type="text">
+    		<button id="resize-gray">Resize</button>
+    	</div>
+
+    	<script>
+    		OrbitGrid.initialize();
+
+    		window.addEventListener('load', function(){
+    			document.querySelector('#resize-gray').addEventListener('click', function(){
+    				document.querySelector('[data-grid-bp]').style.width = document.querySelector('input').value + 'px';
+    				OrbitGrid.update();
+    			});
+    		})
+
+    	</script>
 
     </body>
 </html>
